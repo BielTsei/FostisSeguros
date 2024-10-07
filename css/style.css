@@ -1,0 +1,666 @@
+:root {
+  --blue: #0a3d62;
+  --white: #f9eae1;
+  --orange: #fc6231;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--white);
+}
+/* =============== Menu Responsivo =============== */
+
+#logo {
+  width: 120px;
+}
+
+#header {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  z-index: 100000;
+  background-color: var(--blue);
+}
+#menu {
+  display: flex;
+  gap: 20px;
+}
+#menu a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--white);
+  font-size: 13px;
+}
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    height: 0;
+    right: 0;
+    background-color: var(--blue);
+    z-index: 1000;
+    transition: 1s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    padding-top: 20px;
+    height: calc(100vh - 70px);
+    visibility: visible;
+    transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #menu a {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 2rem;
+    font-size: 14px;
+  }
+  #btn-mobile {
+    display: flex;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background: none;
+    background-color: var(--red);
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+  #hamburguer {
+    display: block;
+    color: var(--white);
+    width: 20px;
+    border-top: 2px solid;
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    transition: 0.6s;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+/* =============== Menu Responsivo =============== */
+
+/* =============== Home =============== */
+
+.home {
+  height: calc(100vh - 70px);
+  background-image: url(/assets/bg-home.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 140px;
+}
+
+.home h1 {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.home h1 strong {
+  font-weight: 800;
+}
+
+/* =============== Home =============== */
+
+/* =============== Home 2 =============== */
+
+.home2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home2 img {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.3;
+  width: 200px;
+}
+
+.home2 h1 {
+  width: 240px;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.home2 p {
+  letter-spacing: 2px;
+  color: var(--white);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.home2 p,
+.home2 h1 {
+  position: relative;
+  z-index: 10;
+}
+
+/* =============== Home 2 =============== */
+
+/* =============== Quem somos =============== */
+
+.quem-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.quem-somos img {
+  width: 250px;
+  margin-top: 38px;
+  margin-bottom: 50px;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quem-somos h1 {
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.quem-somos p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.quem-somos button {
+  width: 240px;
+  height: 50px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 8px;
+}
+
+.quem-somos a {
+  font-size: 12px;
+  color: var(--white);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* =============== Quem somos =============== */
+
+/* =============== Linha divisória =============== */
+
+.line-div {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  background-color: var(--orange);
+  width: 80%;
+}
+
+/* =============== Linha divisória =============== */
+
+/* =============== Depoimentos =============== */
+
+.container-depoimentos {
+  background-color: var(--orange);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-depoimentos h1 {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 18px;
+}
+
+.depoid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.depoid p {
+  width: 70vw;
+  font-style: italic;
+  color: var(--white);
+}
+
+.line-depoid {
+  height: 2px;
+  background-color: var(--blue);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.depoid img {
+  width: 120px;
+  margin-bottom: 25px;
+}
+
+.depoid h3 {
+  color: var(--white);
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+/* =============== Depoimentos =============== */
+
+/* =============== Botões =============== */
+
+.btns-home {
+  padding: 40px 2rem 0px 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btns-home button a {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btns-home button {
+  width: 220px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+}
+
+#btn-contato-home {
+  background-color: var(--blue);
+  margin-bottom: 20px;
+}
+
+#btn-contato-home a {
+  color: var(--white);
+}
+#btn-parceiros {
+  background-color: var(--white);
+  border: 2px solid var(--orange);
+}
+#btn-parceiros a {
+  color: var(--orange);
+}
+
+/* =============== Botões =============== */
+
+/* =============== Footer =============== */
+
+#btn-voltar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  border: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 10;
+}
+
+#btn-voltar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#btn-voltar a i {
+  font-size: 26px;
+}
+
+footer {
+  background-color: var(--blue);
+  padding-top: 40px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+footer iframe {
+  width: 100%;
+  height: 240px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.contato {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contato i {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.contato p {
+  font-size: 13px;
+  color: var(--white);
+}
+
+#cnpj {
+  color: var(--white);
+  font-size: 13px;
+}
+
+#direitos {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.line-div-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  background-color: var(--orange);
+  width: 100%;
+}
+
+/* =============== Footer =============== */
+
+/* =============== Medias Queries =============== */
+
+@media (min-width: 768px) {
+  #header {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .home {
+    padding-left: 5rem;
+  }
+
+  .home h1 {
+    font-size: 26px;
+  }
+
+  .home2 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .container-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+  }
+
+  .quem-somos {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .depoid p {
+    width: 100%;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .depoid {
+    display: block;
+  }
+
+  .depoimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .line-depoid {
+    display: none;
+  }
+
+  .container-depoimentos {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 40px;
+  }
+
+  .btns-home {
+    flex-direction: row;
+    align-items: normal;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #btn-contato-home {
+    margin-bottom: 0px;
+  }
+
+  footer {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  footer div iframe {
+    width: 280px;
+    height: 280px;
+  }
+
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  #header {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .home {
+    padding-left: 10rem;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .container-home2-img {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .home2 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+  }
+
+  .home2 img {
+    position: relative;
+    opacity: 100;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 270px;
+    height: 270px;
+  }
+
+  .home2 h1 {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .home2 p {
+    font-size: 16px;
+  }
+
+  .quem-somos {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .quem-somos img {
+    width: 340px;
+  }
+
+  .quem-somos h1 {
+    font-size: 22px;
+  }
+
+  .quem-somos p {
+    font-size: 16px;
+  }
+
+  .container-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+  }
+
+  .quem-somos button {
+    width: 280px;
+    height: 70px;
+  }
+
+  .quem-somos a {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .container-depoimentos {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 60px;
+  }
+
+  .container-depoimentos h1 {
+    font-size: 22px;
+  }
+
+  .depoimentos {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  .depoid h3 {
+    font-size: 20px;
+  }
+
+  .depoid p {
+    font-size: 16px;
+  }
+
+  .btns-home button {
+    width: 300px;
+    height: 70px;
+  }
+
+  .btns-home button a {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+  }
+  #btn-parceiros {
+    width: 320px;
+  }
+
+  footer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .contato p {
+    font-size: 18px;
+  }
+
+  footer div iframe {
+    width: 50%;
+    height: 400px;
+  }
+
+  .container-footer {
+    gap: 30px;
+  }
+
+  #cnpj {
+    font-size: 14px;
+  }
+}
