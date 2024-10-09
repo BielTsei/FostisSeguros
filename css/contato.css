@@ -1,0 +1,17 @@
+:root {
+  --blue: #0a3d62;
+  --white: #f9eae1;
+  --orange: #fc6231;
+}
+.form h1 {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.form {
+  height: calc(100vh - 70px);
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
