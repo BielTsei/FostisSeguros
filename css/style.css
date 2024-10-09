@@ -519,7 +519,7 @@ footer iframe {
 
   .container-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
@@ -648,12 +648,11 @@ footer iframe {
   }
 
   .contato p {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   footer div iframe {
     width: 50%;
-    height: 400px;
   }
 
   .container-footer {

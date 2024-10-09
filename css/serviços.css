@@ -1,7 +1,7 @@
 :root {
   --blue: #0a3d62;
   --white: #f9eae1;
-  --orange: rgb(252, 98, 49);
+  --orange: #fc6231;
 }
 
 * {
@@ -32,8 +32,9 @@ body {
   padding-left: 3rem;
   padding-top: 120px;
   padding-right: 3rem;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  width: 280px;
 }
 
 /* =============== Home =============== */
@@ -163,25 +164,6 @@ body {
     overflow: hidden;
   }
 }
-
-@media (min-width: 768px) {
-  .container {
-    margin-inline: 2rem;
-  }
-
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-    gap: 2rem;
-  }
-
-  .title-servicos {
-    font-size: 18px;
-  }
-}
-
-/* =============== Cards =============== */
-
 /* =============== Parceiros =============== */
 
 .title-parceiros {
@@ -205,8 +187,86 @@ body {
 .container-parceiros img {
   width: 240px;
 }
+/* =============== Parceiros =============== */
+
+/* =============== Botões =============== */
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+#btn-services-contato {
+  width: 230px;
+  height: 60px;
+  background-color: var(--blue);
+  border-radius: 8px;
+  border: none;
+}
+
+#btn-services-depoid {
+  width: 230px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid var(--orange);
+  background-color: var(--white);
+}
+
+#btn-services-depoid a {
+  color: var(--orange);
+}
+
+button a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .home-servicos h1 {
+    width: 380px;
+    font-size: 22px;
+    padding-left: 6rem;
+  }
+  .container {
+    margin-inline: 2rem;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    gap: 2rem;
+  }
+
+  .title-servicos {
+    font-size: 18px;
+  }
+
+  #btn-services-contato {
+    width: 260px;
+    height: 70px;
+  }
+
+  #btn-services-depoid {
+    width: 260px;
+    height: 70px;
+  }
+
+  button a {
+    font-size: 14px;
+  }
+}
 
 @media (min-width: 1024px) {
+  .home-servicos h1 {
+    width: 480px;
+    font-size: 26px;
+    padding-left: 10rem;
+  }
   .container {
     margin-inline: 3rem;
   }
@@ -218,5 +278,14 @@ body {
 
   .title-servicos {
     font-size: 20px;
+  }
+  #btn-services-contato {
+    width: 290px;
+    height: 70px;
+  }
+
+  #btn-services-depoid {
+    width: 290px;
+    height: 70px;
   }
 }
