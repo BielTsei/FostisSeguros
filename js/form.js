@@ -29,7 +29,7 @@ class FormSubmit {
   onSubmission(event) {
     event.preventDefault();
     this.formButton.disabled = true;
-    this.formButton.innerText = "Enviando...";
+    this.formButton.innerText = "Enviando, aguarde...";
   }
 
   async sendForm(event) {
@@ -57,23 +57,6 @@ class FormSubmit {
     }
   }
 
-  /*   async sendForm(event) {
-    try {
-      this.onSubmission(event);
-      await fetch(this.url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(this.getFormObject()),
-      });
-        
-    } catch (error) {
-      this.displayError();
-      throw new Error(error);
-    }
-  } */
   init() {
     if (this.form) {
       this.form.addEventListener("submit", this.sendForm);

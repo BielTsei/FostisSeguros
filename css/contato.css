@@ -24,7 +24,7 @@
 
 .form {
   max-width: 800px;
-  height: 550px;
+  height: 100%;
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 40px;
@@ -89,6 +89,7 @@ form select option {
   letter-spacing: 2px;
   transition: 0.3s;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 #btn-submit:hover,
@@ -103,6 +104,9 @@ form select option {
 }
 
 .success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
   max-width: 800px;
 }
