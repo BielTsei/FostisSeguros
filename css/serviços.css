@@ -166,6 +166,14 @@ body {
 }
 /* =============== Parceiros =============== */
 
+#parceiros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .title-parceiros {
   font-size: 14px;
   text-align: center;
@@ -174,6 +182,7 @@ body {
 }
 
 .container-parceiros {
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -259,9 +268,16 @@ button a {
   button a {
     font-size: 14px;
   }
+
+  .title-parceiros {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .title-parceiros {
+    font-size: 18px;
+  }
   .home-servicos h1 {
     width: 480px;
     font-size: 26px;

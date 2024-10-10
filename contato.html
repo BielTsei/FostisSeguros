@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +14,11 @@
       href="assets/Logo-Iniciais3.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contato.css" />
     <title>FortisSeguros - Contato</title>
@@ -40,60 +45,89 @@
         </ul>
       </nav>
     </header>
-    <section class="form">
-      <h1>Entre em contato e receba um atendimento personalizado!</h1>
-      <form action="https://formsubmit.co/tseigabriel@gmail.com" method="POST">
-        <label for="name">Nome:</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          required
-          placeholder="Seu nome"
-        />
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Seu melhor email"
-          required
-        />
-        <label for="telefone">Telefone:</label>
-        <input
-          type="text"
-          name="telefone"
-          id="telefone"
-          placeholder="Seu número de whatsapp"
-          required
-        />
-        <label for="tipo">Tipo de seguro:</label>
-        <select name="list" id="list">
-          <option value="Seguro de Vida">Seguro de Vida</option>
-          <option value="Seguro Residencial">Seguro Residencial</option>
-          <option value="Seguro Auto">Seguro Auto</option>
-          <option value="4">Seguro Empresarial</option>
-          <option value="Seguro Empresarial">Seguro de Saúde</option>
-          <option value="Seguro Viagem">Seguro Viagem</option>
-          <option value="Seguro para Condomínios">
-            Seguro para Condomínios
-          </option>
-          <option value="Seguro de Responsabilidade Civil">
-            Seguro de Responsabilidade Civil
-          </option>
-          <option value="Seguro para Equipamentos Eletrônicos">
-            Seguro para Equipamentos Eletrônicos
-          </option>
-        </select>
-        <input type="hidden" name="_subject" value="Novo contato!" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://yourdomain.co/thanks.html"
-        />
-        <button id="btn-submit" type="submit">Enviar</button>
-      </form>
+    <div class="form-container">
+      <h1 class="title-form">
+        Entre em contato e receba um atendimento <strong>personalizado</strong>!
+      </h1>
+      <section class="form">
+        <h3>Entre em contato:</h3>
+        <form action="" method="POST">
+          <div>
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Seu nome"
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Seu melhor email"
+              required
+            />
+            <label for="telefone">Telefone:</label>
+            <input
+              type="text"
+              name="telefone"
+              id="telefone"
+              placeholder="Seu número de whatsapp"
+              required
+            />
+            <label for="tipo">Tipo de seguro:</label>
+            <select name="list" id="list">
+              <option value="" disabled selected>Selecione o tipo:</option>
+              <option value="Seguro de Vida">Seguro de Vida</option>
+              <option value="Seguro Residencial">Seguro Residencial</option>
+              <option value="Seguro Auto">Seguro Auto</option>
+              <option value="4">Seguro Empresarial</option>
+              <option value="Seguro Empresarial">Seguro de Saúde</option>
+              <option value="Seguro Viagem">Seguro Viagem</option>
+              <option value="Seguro para Condomínios">
+                Seguro para Condomínios
+              </option>
+              <option value="Seguro de Responsabilidade Civil">
+                Seguro de Responsabilidade Civil
+              </option>
+              <option value="Seguro para Equipamentos Eletrônicos">
+                Seguro para Equipamentos Eletrônicos
+              </option>
+            </select>
+          </div>
+          <button id="btn-submit" type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="container-youtube">
+      <div>
+        <h3>
+          Nos acompanhe no Youtube e fique por dentro de todas as novidades!
+        </h3>
+        <div class="btn-youtube">
+          <button>
+            <i class="fa-brands fa-youtube" style="color: #ff0000"></i>
+            <a href="https://youtube.com" target="_blank">Youtube</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-redes-sociais">
+      <div class="icons">
+        <a href="https://x.com/?lang=pt-br" target="_blank"
+          ><i class="fa-brands fa-x-twitter" style="color: #000000"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram" style="color: #000000"></i
+        ></a>
+        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
+          ><i class="fa-brands fa-facebook-f" style="color: #000000"></i
+        ></a>
+      </div>
     </section>
     <footer>
       <div class="container-footer">
@@ -137,5 +171,6 @@
       src="https://kit.fontawesome.com/9b18817371.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
