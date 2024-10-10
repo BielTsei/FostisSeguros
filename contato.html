@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contato.css" />
+    <script defer src="/js/form.js"></script>
     <title>FortisSeguros - Contato</title>
   </head>
   <body>
@@ -50,8 +51,11 @@
         Entre em contato e receba um atendimento <strong>personalizado</strong>!
       </h1>
       <section class="form">
-        <h3>Entre em contato:</h3>
-        <form action="" method="POST">
+        <form
+          action="https://formsubmit.co/ajax/tseigabriel@gmail.com"
+          method="POST"
+          data-form
+        >
           <div>
             <label for="name">Nome:</label>
             <input
@@ -77,8 +81,8 @@
               placeholder="Seu número de whatsapp"
               required
             />
-            <label for="tipo">Tipo de seguro:</label>
-            <select name="list" id="list">
+            <label for="list-seguros">Tipo de seguro:</label>
+            <select name="list-seguros" id="list-seguros">
               <option value="" disabled selected>Selecione o tipo:</option>
               <option value="Seguro de Vida">Seguro de Vida</option>
               <option value="Seguro Residencial">Seguro Residencial</option>
@@ -97,7 +101,7 @@
               </option>
             </select>
           </div>
-          <button id="btn-submit" type="submit">Enviar</button>
+          <button id="btn-submit" type="submit" data-button>Enviar</button>
         </form>
       </section>
     </div>
